@@ -2,10 +2,7 @@ package com.example1.springWeek2.entities;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 
 import java.time.LocalDate;
 
@@ -14,6 +11,7 @@ import java.time.LocalDate;
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
+@Builder
 public class EmployeeEntity {
 
     @Id
@@ -27,4 +25,6 @@ public class EmployeeEntity {
 
     private Long salary;
 
+    @Version
+    private Integer version;
 }
