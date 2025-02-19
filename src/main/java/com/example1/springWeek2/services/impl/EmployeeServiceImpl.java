@@ -7,6 +7,7 @@ import com.example1.springWeek2.entities.EmployeeEntity;
 import com.example1.springWeek2.exceptions.ResourceNotFoundException;
 import com.example1.springWeek2.repositories.EmployeeRepo;
 import com.example1.springWeek2.services.EmployeeService;
+import lombok.NoArgsConstructor;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.modelmapper.ModelMapper;
@@ -16,7 +17,9 @@ import java.util.List;
 
 @Slf4j
 @Service
+
 @RequiredArgsConstructor
+
 public class EmployeeServiceImpl implements EmployeeService {
 
     private final EmployeeRepo employeeRepository;
